@@ -1,0 +1,352 @@
+/*Recurso para usar una tipografia descargada*/
+
+@font-face {
+    font-family: 'OpenDescargada';
+    src: url('../Fonts/OpenSans-Regular.ttf') format('woff2');
+}
+
+/*Variables css*/
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: white;
+    color: var(--color_obscuro);
+    line-height: 1.6;
+    font-family: 'Montserrat';
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-family: var(--fuente_titulos);
+}
+header{
+
+    display:flex;
+    background-color: #FFE6E6;
+    justify-content: space-between;
+    align-items:center;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.5);
+    top:0;
+    position: sticky;
+    z-index: 1000;
+    padding: 15px 50px;
+}
+nav{
+    display:center;
+    background-color: white;
+  height: 100%;
+}
+nav ul{
+    display:flex;
+    gap: 20px;
+    align-items:center;
+}
+
+nav a{
+    font-size: 0.95rem;
+    font-weight: 600;
+    color:inherit;
+}
+nav a:hover{
+    /*Aqui tengo que regresar*/
+    color:var(--color_principal);
+}
+
+
+
+.contenedorPrincipal{
+    
+    max-width: 1200px;
+    margin:0 auto;
+    padding:20px;
+}
+
+.tec{
+    display:flex;
+    align-items: center;
+    gap:40px;
+    padding:60px 0;
+}
+.tec_Contenido, .image{
+    flex: 1 1 300px;
+
+}
+
+.tec_Contenido h2{
+    font-size: 2.5rem;
+    color:var(--color_principal);
+    line-height: 1.2;
+}
+.tec_Contenido p{
+    font-size: 1.5rem;
+    margin-bottom:20px;
+}
+.imagenes img{width: 100%;}
+
+
+/* Grind de cursos*/
+#catalogo{
+    padding: 40px 0;
+
+}
+#catalogo h2{
+    text-align:center;
+    color:var(--color_principal);
+}
+.grid_cursos{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.tarjeta_curso{
+    position: center;
+    background-color:var(--color_claro);
+    border: 10px solid var(--color_borde);
+    border-radius: 8px;
+    flex: 1 1 280px;
+    max-width: 3500px;
+    display:flex;
+    flex-direction:column;
+    /*efecto*/
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.tarjeta_curso:hover{
+    position: center;
+    transform: translateY(-10px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08)
+}
+.tarjeta_curso img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.tarjeta_curso a{
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.tarjeta_mapa img{
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+.info_curso{
+    padding:20px;
+    flex-grow:1;
+    flex-direction:column;
+}
+.info_curso h3{
+    font-size:1.3rem;
+    color: var(--color_principal);
+}
+.info_curso p{
+    margin-bottom: 15px;
+    flex-grow:1;
+    color:var(--color_obscuro);
+}
+
+.nivel{
+    display: inline-block;
+    background-color: #FFE6E6;
+    color: #d85c5c;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+
+/*Footer*/
+footer{
+    background-color:var(--color_obscuro);
+
+    color:var(--color_claro);
+    text-align:center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* Estilos para la tabla de hobbies */
+.seccion_tabla {
+    margin: 40px 0;
+    padding: 20px 0;
+}
+
+.seccion_tabla h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.contenedor_tabla {
+    overflow-x: auto;
+}
+
+.tabla_hobbies {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.tabla_hobbies th,
+.tabla_hobbies td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+.tabla_hobbies thead tr {
+    background-color: #FFE6E6;
+    color: #333333;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #f0b8b8;
+}
+
+.tabla_hobbies tbody tr {
+    border-bottom: 1px solid #eeeeee;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.tabla_hobbies tbody tr:last-of-type {
+    border-bottom: 2px solid #FFE6E6;
+}
+
+.tabla_hobbies tbody tr:hover {
+    background-color: #fff5f5;
+}
+
+.tabla_hobbies td:first-child {
+    font-weight: 600;
+    color: #333333;
+}
+
+.tabla_hobbies td:last-child {
+    font-weight: 600;
+    color: #d85c5c;
+}
+
+/* Estilos para listas ordenadas */
+.seccion_lista {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fafafa;
+    border-left: 5px solid #d85c5c;
+    border-radius: 6px;
+}
+
+.seccion_lista h3 {
+    color: var(--color_principal);
+    margin-bottom: 10px;
+}
+
+.lista_ordenada {
+    margin-left: 25px;
+    padding-left: 10px;
+}
+
+.lista_ordenada li {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Estilos para video embebido (YouTube) */
+.seccion_video {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.seccion_video h2 {
+    color: var(--color_principal);
+    margin-bottom: 15px;
+}
+
+.contenedor_video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.contenedor_video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Estilos para modificadores span */
+.destacado {
+    color: #d85c5c;
+    font-weight: bold;
+}
+
+.resaltado {
+    background-color: #fff0f0;
+    color: #c0392b;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.badge_lugar {
+    background-color: #e8f4f8;
+    color: #2980b9;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.icono_span {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.boton_ancla {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #FFE6E6;
+    color: #d85c5c;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.boton_ancla:hover {
+    background-color: #f0c4c4;
+}
+
